@@ -13,7 +13,6 @@
       if (msg == "fail") {
          alert("아이디 또는 비밀번호가 비어있거나 중복됩니다. 다시 입력해주세요.");
       }
-      console.log(msg);
    }
 </script>
 <style>

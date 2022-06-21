@@ -12,14 +12,11 @@ window.onload = function(){
 	console.log(msg);
 	if (msg == "fail") {
 		alert("아이디 또는 비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
-		console.log(msg);
 	}else if (msg == ""){
 		document.getElementById("sublogin").focus();
-		console.log(msg);
+		document.getElementById("sublogin").focus();
 	}else if (msg == "empty"){
 		alert("아이디 또는 비밀번호를 입력해 주세요.");
-		console.log(msg);
-		console.log(${error});
 	}
 }
 
@@ -202,7 +199,7 @@ body {
   <h2>Login</h2>
   <form action="/loginchk" method="post">
     <div class="user-box">
-      <input type="text" name="id" >
+      <input type="text" name="id" id="sublogin">
       <label>Username</label>
     </div>
     <div class="user-box">
