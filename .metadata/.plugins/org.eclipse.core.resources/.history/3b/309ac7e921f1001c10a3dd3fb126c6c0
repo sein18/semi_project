@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		let msg = '${error}';
+
+		if (msg == "fail") {
+			alert("아이디 또는 비밀번호가 비어있거나 중복됩니다. 다시 입력해주세요.");
+		}
+		console.log(msg);
+	}
+</script>
+</head>
+<body>
+
+	<h1>회원가입</h1>
+	<form action="/registerres" method="post">
+		<table>
+			<tr>
+				<th>ID</th>
+				<td><input type="text" name="id"></td>
+			</tr>
+
+			<tr>
+				<th>NAME</th>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<th>PW</th>
+				<td><input type="password" name="pw"></td>
+			</tr>
+
+			<tr>
+				<th>EMAIL</th>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<th>PHONE</th>
+				<td><input type="text" name="phone"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<input type="submit" value="회원가입"> 
+				<input type="button" value="취소" onclick="location.href='/loginok'">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

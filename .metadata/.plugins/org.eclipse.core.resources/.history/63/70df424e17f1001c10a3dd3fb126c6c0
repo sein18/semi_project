@@ -1,0 +1,127 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<!-- @!@!@!@STYLE@!@!@!@ -->
+<style>
+        /*
+        가장 속의 div가 선택된다.
+        */
+   div{
+       font-size : 20px;
+       color:red;
+   }
+   a, a:visited{
+       color :#222;
+       text-decoration : none;
+   }
+   html, body{
+      width : 100%;
+      height : 100%;
+   }
+         
+   #dogGnb{
+       position : relative;
+       background-color : yellow;
+       z-index : 2000;
+       width : 100%;
+       height : 100%;
+   
+   }
+   .container{
+       position : relative;
+       width : 1130px;
+       height : 100%;
+       margin : 0 auto;
+       padding : 0 30px;
+       display : flex;
+   
+   }
+   hr{
+       height : 30vh;
+       width : .5vw;
+       border-width : 0;
+       color : #000;
+       background-color: #000;
+   }
+</style>
+<!-- @!@!@!@STYLE@!@!@!@ -->
+
+</head>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=635a1cbf5d8015b6c619d8b4f941ae4a"></script>
+
+<body>
+   <!-- div 1 -->
+   <div id = "dogGnb" role = "navigation">
+        <div class = "container">
+            <h1 id = "logo">
+                <a href = "/"> 
+                    <div class = "three">Three</div>
+                    "Maps API"
+                </a>
+            </h1>
+        
+            <div id = "FAVORITE" class = "gnbBox">
+                <ul class = "list_nav type fix">
+                    <li class = "nav_item">
+                        <a href ="http://www.naver.com" class = "nav">
+                            "서울"
+                        </a>
+                    </li>
+                    <li class = "nav_item">
+                        <a href = "http://www.daum.net" class = "nav">
+                            "강남"
+                        </a>
+                    </li>
+                    <li class = "nav_item">
+                        <a href = "http://www.google.com" class = "nav">
+                            "강동"
+                        </a>
+                    </li>
+                    <li class = "nav_item">
+                        <a href = "http://www.instagram.com" class = "nav">
+                            "강북"
+                        </a>
+                    </li>
+                    <li class = "nav_item">
+                        <a href = "http://www.facebook.com" class = "nav">
+                            "강서"
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <!-- div 2 -->
+            <div id = "Description" class="DesBox">
+                <h1 id = "information">
+                    "BBBBB"
+                </h1>
+            </div>
+            <hr>
+
+
+              <!-- div 3 -->
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=635a1cbf5d8015b6c619d8b4f941ae4a"></script>
+            <div id="map" class = "MapBox" style="width:300px; height:auto;" ></div>
+
+            <script>
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = { 
+                    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                    level: 3 // 지도의 확대 레벨
+                };
+
+                // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+                var map = new kakao.maps.Map(mapContainer, mapOption); 
+            </script>
+            
+            </div>
+            
+          
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+package com.team.dog.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("dog")
+public class DogController {
+	
+	@GetMapping("/mapmain")
+	public String mapmain() {
+		System.out.println("오류");
+		return "mapmain";
+	}
+
+
+
+}

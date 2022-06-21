@@ -1,0 +1,14 @@
+package com.team.dog.model.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.team.dog.model.mapper.DogMapper;
+
+@Service
+public class DogService {
+
+	@Autowired
+	private DogMapper dogMapper;
+	
+}

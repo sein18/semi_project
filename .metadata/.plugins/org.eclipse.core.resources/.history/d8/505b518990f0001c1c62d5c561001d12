@@ -1,0 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		let id = document.getElementsByName("id")[0].value;
+		let name = document.getElementsByName("name")[0].value;
+		let pw = document.getElementsByName("pw")[0].value;
+		if ((id =="")&&(id==null)||(name =="")&&(name==null)||(pw =="")&&(pw==null)) {
+			alert("비어있는 칸이 있습니다. 다시 입력해주세요.");
+			location.reload();
+		}
+		else{
+		location.href='/login/loginok';			
+		}
+	}
+</script>
+</head>
+<body>
+
+	<h1>회원가입</h1>
+	<form action="chk();" method="post">
+		<table>
+			<tr>
+				<th>ID</th>
+				<td><input type="text" name="id"></td>
+			</tr>
+
+			<tr>
+				<th>NAME</th>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<th>PW</th>
+				<td><input type="password" name="pw"></td>
+			</tr>
+
+			<tr>
+				<th>EMAIL</th>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<th>PHONE</th>
+				<td><input type="text" name="phone"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="회원가입"> 
+				<input type="button" value="취소" onclick="location.href='/login/loginok';">
+		</table>
+
+	</form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+package com.team.dog.model.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+
+import com.team.dog.model.dto.DogDto;
+
+@Mapper
+public interface DogMapper {
+
+	@Select(" SELECT * FROM DOG ORDER BY MYNO DESC ")
+	List<DogDto> selectList();
+}
