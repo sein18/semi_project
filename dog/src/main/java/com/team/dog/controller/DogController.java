@@ -13,12 +13,10 @@ public class DogController {
    private DogService dogService; 
    
    @GetMapping("/mapmain")
-   public String mapmain(Model model, String hospitalname) {
+   public String mapmain(Model model, String hospitalname, String fin) {
       model.addAttribute("list",dogService.selectList());
-      
       model.addAttribute("searchlist", dogService.selectSearchList(hospitalname));
-      System.out.println(dogService.selectSearchList(hospitalname));
-      
+      model.addAttribute("fin", fin);
       return "mapmain";
    }
    

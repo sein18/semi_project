@@ -30,22 +30,30 @@ public class LoginController {
 
 	}
 
-	@PostMapping("/registerres")
-	public String RegisterRes(LoginDto dto, Model model, HttpServletRequest request, HttpServletResponse response) {
-		int res = 0;
-		if ((dto.getId() == "" || dto.getId() == null) || (dto.getPw() == "" || dto.getPw() == null)||(dto.getName() == "" || dto.getName() == null)) {
-			model.addAttribute("error", "fail");
-			return "register";
-		} else { 
-				res = loginService.register(dto);
-				if (res > 0) { 
-					return "login";
-				}else {
-				model.addAttribute("error", "fail");
-				return "register";
-			}
-		}
-	}
+	   @PostMapping("/registerres")
+	   public String RegisterRes(LoginDto dto, Model model) {
+	      int res = 0;
+	      if ((dto.getId() == "" || dto.getId() == null) || (dto.getPw() == "" || dto.getPw() == null)||(dto.getName() == "" || dto.getName() == null)) {
+	  		      model.addAttribute("error", "fail");
+	      } else {
+
+	         try {
+
+	            res = loginService.register(dto);
+	            if (res > 0) {
+ 
+	               return "login";   
+	            }
+	         } catch (Exception e) {
+	            e.printStackTrace();
+	            model.addAttribute("error", "fail");
+	            return "register";
+	         }
+
+	      }
+	   return "register";
+	   }
+	  
 
 	@PostMapping("/loginchk")
 	public String LoginChk(LoginDto dto, Model model, HttpServletRequest request, HttpServletResponse response) {
