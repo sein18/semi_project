@@ -22,8 +22,7 @@ public class LoginController {
 	@GetMapping("/loginok")
 	public String Login() {
 		return "login";
-	}
-
+	} 
 	@GetMapping("/register")
 	public String Register(Model model) {
 		return "register";

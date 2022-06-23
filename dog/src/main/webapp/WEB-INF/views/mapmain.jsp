@@ -533,12 +533,12 @@ li:hover{
          </div>
          <div class="DesBox" id="table5" style="display: block;">
             <table border="1">
-               <c:forEach var="dto" items="${searchlist}">
                   <tr>
                      <th>병원 이름</th>
                      <th>병원 전화번호</th>
                      <th>도로명 주소</th>
                   </tr>
+               <c:forEach var="dto" items="${searchlist}">
                   <tr>
                      <td><a onclick="selectone(${dto.lat},${dto.lng});">${dto.name}</a></td>
                      <td>${dto.phone }</td>

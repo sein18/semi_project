@@ -59,7 +59,7 @@ body {
    <h1>동물병원을 찾아 드립니다</h1>
    <h2>소중한 우리 강아지, 고양이등..</h2>
    <a href="/loginok">회원 이용</a>
-   <a href="/mapmain">비회원 이용</a>
+   <a href="/mapmain">비회원 이용</a> 
    </div>
 </body>
 </html>
